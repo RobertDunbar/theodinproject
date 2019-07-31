@@ -2,6 +2,8 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
   skip_before_action :verify_authenticity_token
   before_action :authenticate_user!
 
+  # sample cample campe
+
   def github
     @user = UserProvider.find_user(auth)
     update_users_avatar if avatar_needs_updated?
